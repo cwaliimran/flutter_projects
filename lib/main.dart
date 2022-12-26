@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/details.dart';
 
 import 'NamesList.dart';
 
@@ -346,6 +347,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 hasScrollBody: false,
                 child: Column(
                   children: <Widget>[
+                    TextButton(
+                      child: Text("Details screen"),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                 return DetailsScreen(namesList[0]);
+                                }));
+                      },
+                    ),
                     Card(
                         margin: EdgeInsets.all(2.0),
                         child: Padding(
